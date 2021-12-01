@@ -16,7 +16,9 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 
 /* Acá va tu código */
 #ejercicioDos{
-    visibility: hidden;
+    /* visibility: hidden; */
+    /* display: none;  hace que no se muestre y se desplace de la view port*/
+    display: none;
 }
 
 
@@ -24,8 +26,9 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 
 /* Acá va tu código */
 #ejercicioTres{
-    position: absolute;
-    bottom: 100px;
+    position: relative;
+    /* position: absolute; */
+    top: 100px;
     left: 200px;
 }
 
@@ -47,6 +50,7 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* justify-content: space-evenly; */
     flex-direction: row-reverse;
 }
 
