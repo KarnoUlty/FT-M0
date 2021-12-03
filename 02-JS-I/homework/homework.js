@@ -43,7 +43,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return y-x;
+  return x-y;
 }
 
 function multiplica(x, y) {
@@ -118,7 +118,7 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(!num%2===0){
+  if(num%2===1){
     return true;
   }
   return false;
@@ -134,7 +134,7 @@ function elevarAlCuadrado(num) {
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return Math.pow(num,23);
+  return Math.pow(num,3);
 }
 
 function elevar(num, exponent) {
@@ -199,7 +199,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola "+nombre;
+  return "Hola "+nombre+"!";
 }
 
 function obtenerAreaRectangulo(alto, ancho) {

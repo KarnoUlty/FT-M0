@@ -27,11 +27,12 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  switch(status){
-    case 1: return "Online";
-    case 2: return "Away";
-    default : return "Ofline";
+  if(status===1){
+    return "Online";
+  }else if(status===2){
+    return "Away";
   }
+  return "Offline"
 
 }
 
@@ -137,16 +138,20 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if(num1>num2 && num1>num3 && num1>0){
-    return "Número 1 es mayor y positivo";
-  }else if(num1<0 || num2<0 || num3<0){
-    return "Hay negativos";
-  }else if(num3>num1 && num3>num2){
-    num3++;
-    return num3;
-  }else if(num1===0 || num2===0 || num3===0){
+  if(num1===0 || num2===0 || num3===0){
     return "Error";
   }
+  if(num1<0 || num2<0 || num3<0){
+    return "Hay negativos";
+  }
+  if(num1>num2 && num1>num3 && num1>0){
+    return "Número 1 es mayor y positivo";
+  }
+  if(num3>num1 && num3>num2){
+    num3++;
+    return num3;
+  }
+  
   return false;
 }
 
@@ -180,7 +185,7 @@ function esVerdadero(valor){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero>100){
+  if(numero>=100 && numero <=999){
     return true;
   }
   return false;
@@ -195,6 +200,7 @@ function doWhile(numero) {
     numero+=5;
     cont++;
   }while(cont < 8);
+  return numero;
 }
 
 // No modificar nada debajo de esta línea
